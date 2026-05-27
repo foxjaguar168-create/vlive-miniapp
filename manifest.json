@@ -1,0 +1,28 @@
+{
+  "name": "VLive Pro",
+  "short_name": "VLive Pro",
+  "description": "VLive Pro Trading Monitor",
+  "start_url": "/vlive-miniapp/",
+  "display": "standalone",
+  "background_color": "#080b12",
+  "theme_color": "#080b12",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "vlive_icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
