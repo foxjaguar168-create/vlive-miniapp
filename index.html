@@ -357,7 +357,6 @@ z-index:0;
     <span class="mode-badge" id="mg-dir-badge" style="background:rgba(168,85,247,0.15);color:var(--purple)">AUTO-EMA</span>
   </div>
   <div class="stat-grid" style="margin-bottom:10px">
-    <div class="stat"><div class="stat-label">DAILY P/L</div><div class="stat-val" id="mg-daily">$0.00</div></div>
     <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="mg-float">$0.00</div></div>
   </div>
   <div class="pos-row">
@@ -644,8 +643,8 @@ function updateScalp(d){
   bEl.className='signal-badge '+(bias==='BULLISH'?'sig-buy':bias==='BEARISH'?'sig-sell':'sig-none');
   setV('sc-buy-cnt',d.buyCount||0,'info');
   setV('sc-sell-cnt',d.sellCount||0,'info');
-  const fl=$('sc-float');fl.textContent='$'+fmt(d.floating);fl.className='stat-val '+(parseFloat(d.floating||0)>=0?'pos':'neg');
-  const dy=$('sc-daily');dy.textContent='$'+fmt(d.dailyProfit||0);dy.className='stat-val '+(parseFloat(d.dailyProfit||0)>=0?'pos':'neg');
+  const fl=$('sc-float');if(fl){fl.textContent='$'+fmt(d.floating);fl.className='stat-val '+(parseFloat(d.floating||0)>=0?'pos':'neg');}
+  const dy=$('sc-daily');if(dy){dy.textContent='$'+fmt(d.dailyProfit||0);dy.className='stat-val '+(parseFloat(d.dailyProfit||0)>=0?'pos':'neg');}
   // vol updated from manual
   pauseState.scalp=d.paused===true||d.paused==='true';
   updatePauseBtn('sc',pauseState.scalp);
@@ -657,7 +656,7 @@ function updateMG(d){
   $('mg-loading').style.display='none';$('mg-content').style.display='block';
   const mEl=$('mg-mode');mEl.textContent=d.mode==='SAFE'?'SAFE ZONE':'NORMAL';mEl.className='mode-badge '+(d.mode==='SAFE'?'mode-safe':'mode-normal');
   $('mg-dir-badge').textContent=d.direction||'AUTO-EMA';
-  const dy=$('mg-daily');dy.textContent='$'+fmt(d.dailyProfit||0);dy.className='stat-val '+(parseFloat(d.dailyProfit||0)>=0?'pos':'neg');
+  const dy=$('mg-daily');if(dy){dy.textContent='$'+fmt(d.dailyProfit||0);dy.className='stat-val '+(parseFloat(d.dailyProfit||0)>=0?'pos':'neg');}
   const bp=parseFloat(d.buyProfit||0),sp=parseFloat(d.sellProfit||0);
   const fl=$('mg-float');fl.textContent='$'+fmt(bp+sp);fl.className='stat-val '+(bp+sp>=0?'pos':'neg');
   setV('mg-buy-cnt',(d.buyCount||0)+' pos');
