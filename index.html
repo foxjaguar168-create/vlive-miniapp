@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,196 +18,201 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap');
 
 :root {
-  --bg:#080b12; --bg2:#0d1220; --bg3:#121929; --border:#1e2d4a;
-  --accent:#00d4ff; --green:#00ff88; --red:#ff3d5a; --yellow:#ffd600; --purple:#a855f7;
-  --text:#e2e8f0; --muted:#4a6080;
-  --m:#00ff88; --sc:#00d4ff; --mg:#a855f7;
+–bg:#080b12; –bg2:#0d1220; –bg3:#121929; –border:#1e2d4a;
+–accent:#00d4ff; –green:#00ff88; –red:#ff3d5a; –yellow:#ffd600; –purple:#a855f7;
+–text:#e2e8f0; –muted:#4a6080;
+–m:#00ff88; –sc:#00d4ff; –mg:#a855f7;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;min-height:100vh;overflow-x:hidden}
+body{background:var(–bg);color:var(–text);font-family:‘Rajdhani’,sans-serif;min-height:100vh;overflow-x:hidden}
 body::after{
-  content:'';
-  position:fixed;
-  bottom:-80px;
-  right:-80px;
-  width:320px;
-  height:320px;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='vL' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ffe580'/%3E%3Cstop offset='100%25' stop-color='%237a5000'/%3E%3C/linearGradient%3E%3ClinearGradient id='vR' x1='100%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23a0d4ff'/%3E%3Cstop offset='100%25' stop-color='%230030aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='132,82 200,82 258,316 228,316' fill='url(%23vL)' opacity='0.9'/%3E%3Cpolygon points='380,82 312,82 254,316 284,316' fill='url(%23vR)' opacity='0.9'/%3E%3C/svg%3E");
-  background-size:contain;
-  background-repeat:no-repeat;
-  opacity:0.04;
-  pointer-events:none;
-  z-index:0;
+content:’’;
+position:fixed;
+bottom:-80px;
+right:-80px;
+width:320px;
+height:320px;
+background-image:url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 512 512’%3E%3Cdefs%3E%3ClinearGradient id=‘vL’ x1=‘0%25’ y1=‘0%25’ x2=‘100%25’ y2=‘100%25’%3E%3Cstop offset=‘0%25’ stop-color=’%23ffe580’/%3E%3Cstop offset=‘100%25’ stop-color=’%237a5000’/%3E%3C/linearGradient%3E%3ClinearGradient id=‘vR’ x1=‘100%25’ y1=‘0%25’ x2=‘0%25’ y2=‘100%25’%3E%3Cstop offset=‘0%25’ stop-color=’%23a0d4ff’/%3E%3Cstop offset=‘100%25’ stop-color=’%230030aa’/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points=‘132,82 200,82 258,316 228,316’ fill=‘url(%23vL)’ opacity=‘0.9’/%3E%3Cpolygon points=‘380,82 312,82 254,316 284,316’ fill=‘url(%23vR)’ opacity=‘0.9’/%3E%3C/svg%3E”);
+background-size:contain;
+background-repeat:no-repeat;
+opacity:0.04;
+pointer-events:none;
+z-index:0;
 }
 
 /* ── HEADER ── */
-.header{position:sticky;top:0;z-index:100;background:rgba(8,11,18,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 16px 0}
+.header{position:sticky;top:0;z-index:100;background:rgba(8,11,18,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(–border);padding:10px 16px 0}
 .header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.logo{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--accent);letter-spacing:2px}
-.logo span{color:var(--green)}
+.logo{font-family:‘JetBrains Mono’,monospace;font-size:13px;font-weight:700;color:var(–accent);letter-spacing:2px}
+.logo span{color:var(–green)}
 .hright{display:flex;align-items:center;gap:8px}
-.acc-badge{font-size:10px;color:var(--muted);letter-spacing:1px;cursor:pointer;padding:2px 8px;border:1px solid var(--border);border-radius:4px;font-family:'JetBrains Mono',monospace;transition:all 0.2s}
-.acc-badge:active{border-color:var(--accent);color:var(--accent)}
+.acc-badge{font-size:10px;color:var(–muted);letter-spacing:1px;cursor:pointer;padding:2px 8px;border:1px solid var(–border);border-radius:4px;font-family:‘JetBrains Mono’,monospace;transition:all 0.2s}
+.acc-badge:active{border-color:var(–accent);color:var(–accent)}
 .sess-badge{font-size:10px;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:4px}
-.sess-asia{background:rgba(0,212,255,0.15);color:var(--accent)}
-.sess-london{background:rgba(255,214,0,0.15);color:var(--yellow)}
-.sess-ny{background:rgba(0,255,136,0.15);color:var(--green)}
-.sess-pre{background:rgba(74,96,128,0.2);color:var(--muted)}
-.status-dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red)}
-.status-dot.on{background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
-.status-dot.lag{background:var(--yellow);box-shadow:0 0 6px var(--yellow);animation:none}
+.sess-asia{background:rgba(0,212,255,0.15);color:var(–accent)}
+.sess-london{background:rgba(255,214,0,0.15);color:var(–yellow)}
+.sess-ny{background:rgba(0,255,136,0.15);color:var(–green)}
+.sess-pre{background:rgba(74,96,128,0.2);color:var(–muted)}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(–red);box-shadow:0 0 8px var(–red)}
+.status-dot.on{background:var(–green);box-shadow:0 0 8px var(–green);animation:pulse 2s infinite}
+.status-dot.lag{background:var(–yellow);box-shadow:0 0 6px var(–yellow);animation:none}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 
 /* BAL ROW */
 .bal-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
-.bal-val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--text)}
-.bal-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.bal-val{font-family:‘JetBrains Mono’,monospace;font-size:22px;font-weight:700;color:var(–text)}
+.bal-label{font-size:11px;color:var(–muted);letter-spacing:1px}
 .bal-change{font-size:13px;font-weight:600}
-.pos{color:var(--green)}.neg{color:var(--red)}
+.pos{color:var(–green)}.neg{color:var(–red)}
 
 /* EA STATUS BAR */
 .ea-bar{display:flex;align-items:center;justify-content:space-between;padding:5px 0 7px;border-bottom:1px solid rgba(30,45,74,0.5);margin-bottom:2px}
 .ea-conn{font-size:10px;font-weight:700;letter-spacing:1px}
-.ea-conn.on{color:var(--green)}.ea-conn.lag{color:var(--yellow)}.ea-conn.off{color:var(--red)}
+.ea-conn.on{color:var(–green)}.ea-conn.lag{color:var(–yellow)}.ea-conn.off{color:var(–red)}
 .mod-pills{display:flex;gap:5px}
 .mod-pill{font-size:9px;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:1px}
-.pill-m-run {background:rgba(0,255,136,0.15);color:var(--green);border:1px solid rgba(0,255,136,0.3)}
-.pill-sc-run{background:rgba(0,212,255,0.15);color:var(--accent);border:1px solid rgba(0,212,255,0.3)}
-.pill-mg-run{background:rgba(168,85,247,0.15);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
-.pill-pause {background:rgba(255,214,0,0.12);color:var(--yellow);border:1px solid rgba(255,214,0,0.25)}
-.pill-off   {background:rgba(74,96,128,0.12);color:var(--muted);border:1px solid rgba(74,96,128,0.2)}
+.pill-m-run {background:rgba(0,255,136,0.15);color:var(–green);border:1px solid rgba(0,255,136,0.3)}
+.pill-sc-run{background:rgba(0,212,255,0.15);color:var(–accent);border:1px solid rgba(0,212,255,0.3)}
+.pill-mg-run{background:rgba(168,85,247,0.15);color:var(–purple);border:1px solid rgba(168,85,247,0.3)}
+.pill-pause {background:rgba(255,214,0,0.12);color:var(–yellow);border:1px solid rgba(255,214,0,0.25)}
+.pill-off   {background:rgba(74,96,128,0.12);color:var(–muted);border:1px solid rgba(74,96,128,0.2)}
 
 /* TABS */
 .tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
-.tab{padding:8px 4px;text-align:center;font-size:12px;font-weight:600;letter-spacing:1px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;text-transform:uppercase}
-.tab.active-m {color:var(--m); border-color:var(--m)}
-.tab.active-sc{color:var(--sc);border-color:var(--sc)}
-.tab.active-mg{color:var(--mg);border-color:var(--mg)}
+.tab{padding:8px 4px;text-align:center;font-size:12px;font-weight:600;letter-spacing:1px;color:var(–muted);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;text-transform:uppercase}
+.tab.active-m {color:var(–m); border-color:var(–m)}
+.tab.active-sc{color:var(–sc);border-color:var(–sc)}
+.tab.active-mg{color:var(–mg);border-color:var(–mg)}
 
 /* CONTENT */
-.content{padding:12px 12px 100px;position:relative;z-index:1}
+.content{padding:12px 12px 170px;position:relative;z-index:1}
 .panel{display:none;animation:fadeIn 0.2s ease}
 .panel.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* CARDS */
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
-.card.m-card::before {background:linear-gradient(90deg,var(--m),transparent)}
-.card.sc-card::before{background:linear-gradient(90deg,var(--sc),transparent)}
-.card.mg-card::before{background:linear-gradient(90deg,var(--mg),transparent)}
-.card-title{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+.card{background:var(–bg2);border:1px solid var(–border);border-radius:10px;padding:12px;margin-bottom:10px;position:relative;overflow:hidden}
+.card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px}
+.card.m-card::before {background:linear-gradient(90deg,var(–m),transparent)}
+.card.sc-card::before{background:linear-gradient(90deg,var(–sc),transparent)}
+.card.mg-card::before{background:linear-gradient(90deg,var(–mg),transparent)}
+.card-title{font-size:10px;letter-spacing:2px;color:var(–muted);text-transform:uppercase;margin-bottom:10px}
 
 /* STAT GRID */
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.stat{background:var(--bg3);border-radius:8px;padding:8px 10px}
-.stat-label{font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:2px}
-.stat-val{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:var(--text)}
-.stat-val.pos{color:var(--green)}.stat-val.neg{color:var(--red)}.stat-val.info{color:var(--accent)}.stat-val.warn{color:var(--yellow)}
+.stat{background:var(–bg3);border-radius:8px;padding:8px 10px}
+.stat-label{font-size:10px;color:var(–muted);letter-spacing:1px;margin-bottom:2px}
+.stat-val{font-family:‘JetBrains Mono’,monospace;font-size:15px;font-weight:700;color:var(–text)}
+.stat-val.pos{color:var(–green)}.stat-val.neg{color:var(–red)}.stat-val.info{color:var(–accent)}.stat-val.warn{color:var(–yellow)}
 
 /* POS ROW */
-.pos-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+.pos-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(–border)}
 .pos-row:last-child{border-bottom:none}
 .pos-side{display:flex;align-items:center;gap:8px}
 .side-badge{font-size:10px;font-weight:700;letter-spacing:1px;padding:2px 7px;border-radius:4px}
-.buy-badge {background:rgba(0,255,136,0.15);color:var(--green)}
-.sell-badge{background:rgba(255,61,90,0.15);color:var(--red)}
-.pos-lots{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
-.pos-pnl {font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600}
+.buy-badge {background:rgba(0,255,136,0.15);color:var(–green)}
+.sell-badge{background:rgba(255,61,90,0.15);color:var(–red)}
+.pos-lots{font-family:‘JetBrains Mono’,monospace;font-size:12px;color:var(–muted)}
+.pos-pnl {font-family:‘JetBrains Mono’,monospace;font-size:14px;font-weight:600}
 
 /* SIGNAL */
 .signal-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
 .signal-badge{font-size:11px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px}
-.sig-buy {background:rgba(0,255,136,0.15);color:var(--green)}
-.sig-sell{background:rgba(255,61,90,0.15);color:var(--red)}
-.sig-none{background:rgba(74,96,128,0.3);color:var(--muted)}
+.sig-buy {background:rgba(0,255,136,0.15);color:var(–green)}
+.sig-sell{background:rgba(255,61,90,0.15);color:var(–red)}
+.sig-none{background:rgba(74,96,128,0.3);color:var(–muted)}
 
 /* MODE BADGE */
 .mode-badge{font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:4px;text-transform:uppercase}
-.mode-safe  {background:rgba(255,214,0,0.15);color:var(--yellow)}
-.mode-normal{background:rgba(0,212,255,0.15);color:var(--accent)}
-.mode-lock  {background:rgba(255,61,90,0.15);color:var(--red)}
+.mode-safe  {background:rgba(255,214,0,0.15);color:var(–yellow)}
+.mode-normal{background:rgba(0,212,255,0.15);color:var(–accent)}
+.mode-lock  {background:rgba(255,61,90,0.15);color:var(–red)}
 
 /* DIRECTION BUTTONS */
 .dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:2px}
-.dir-btn{padding:9px 4px;border-radius:8px;border:1px solid var(--border);font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;text-align:center;background:var(--bg3);color:var(--muted);transition:all 0.15s;text-transform:uppercase}
+.dir-btn{padding:9px 4px;border-radius:8px;border:1px solid var(–border);font-family:‘Rajdhani’,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;text-align:center;background:var(–bg3);color:var(–muted);transition:all 0.15s;text-transform:uppercase}
 .dir-btn:active{transform:scale(0.96)}
-.db-buy {background:rgba(0,255,136,0.12);color:var(--green); border-color:rgba(0,255,136,0.35)}
-.db-sell{background:rgba(255,61,90,0.12);color:var(--red);   border-color:rgba(255,61,90,0.35)}
-.db-auto{background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.35)}
-.db-both{background:rgba(168,85,247,0.12);color:var(--purple);border-color:rgba(168,85,247,0.35)}
+.db-buy {background:rgba(0,255,136,0.12);color:var(–green); border-color:rgba(0,255,136,0.35)}
+.db-sell{background:rgba(255,61,90,0.12);color:var(–red);   border-color:rgba(255,61,90,0.35)}
+.db-auto{background:rgba(0,212,255,0.12);color:var(–accent);border-color:rgba(0,212,255,0.35)}
+.db-both{background:rgba(168,85,247,0.12);color:var(–purple);border-color:rgba(168,85,247,0.35)}
 
 /* VOLATILITY */
-.vol-card{display:flex;align-items:center;gap:12px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px;position:relative;overflow:hidden}
-.vol-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
-.vol-card.m-card::before {background:linear-gradient(90deg,var(--m),transparent)}
-.vol-card.sc-card::before{background:linear-gradient(90deg,var(--sc),transparent)}
-.vol-card.mg-card::before{background:linear-gradient(90deg,var(--mg),transparent)}
+.vol-card{display:flex;align-items:center;gap:12px;background:var(–bg2);border:1px solid var(–border);border-radius:10px;padding:12px;margin-bottom:10px;position:relative;overflow:hidden}
+.vol-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px}
+.vol-card.m-card::before {background:linear-gradient(90deg,var(–m),transparent)}
+.vol-card.sc-card::before{background:linear-gradient(90deg,var(–sc),transparent)}
+.vol-card.mg-card::before{background:linear-gradient(90deg,var(–mg),transparent)}
 .vol-icon{font-size:22px;flex-shrink:0}
 .vol-body{flex:1}
-.vol-label{font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
-.vol-num{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700}
+.vol-label{font-size:9px;color:var(–muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
+.vol-num{font-family:‘JetBrains Mono’,monospace;font-size:20px;font-weight:700}
 .vol-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .vol-status{font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:1px;text-transform:uppercase}
-.vs-ok  {background:rgba(0,255,136,0.15);color:var(--green)}
-.vs-low {background:rgba(255,214,0,0.15);color:var(--yellow)}
-.vs-high{background:rgba(255,61,90,0.15);color:var(--red)}
-.vs-off {background:rgba(74,96,128,0.15);color:var(--muted)}
-.vol-range{font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:1px}
+.vs-ok  {background:rgba(0,255,136,0.15);color:var(–green)}
+.vs-low {background:rgba(255,214,0,0.15);color:var(–yellow)}
+.vs-high{background:rgba(255,61,90,0.15);color:var(–red)}
+.vs-off {background:rgba(74,96,128,0.15);color:var(–muted)}
+.vol-range{font-size:9px;color:var(–muted);font-family:‘JetBrains Mono’,monospace;letter-spacing:1px}
 
 /* BUTTONS */
 .btn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:2px}
-.btn{padding:11px 8px;border-radius:8px;border:none;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all 0.15s;text-transform:uppercase}
+.btn{padding:11px 8px;border-radius:8px;border:none;font-family:‘Rajdhani’,sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all 0.15s;text-transform:uppercase}
 .btn:active{transform:scale(0.96)}
-.btn-pause {background:rgba(255,214,0,0.12);color:var(--yellow);border:1px solid rgba(255,214,0,0.25)}
-.btn-resume{background:rgba(0,255,136,0.12);color:var(--green); border:1px solid rgba(0,255,136,0.25)}
-.btn-close {background:rgba(255,61,90,0.12);color:var(--red);   border:1px solid rgba(255,61,90,0.25)}
+.btn-pause {background:rgba(255,214,0,0.12);color:var(–yellow);border:1px solid rgba(255,214,0,0.25)}
+.btn-resume{background:rgba(0,255,136,0.12);color:var(–green); border:1px solid rgba(0,255,136,0.25)}
+.btn-close {background:rgba(255,61,90,0.12);color:var(–red);   border:1px solid rgba(255,61,90,0.25)}
 
 /* INPUT ROW */
 .input-row{display:flex;gap:8px;align-items:center;margin-top:8px}
-.input-row input{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text);outline:none}
-.input-row input:focus{border-color:var(--accent)}
+.input-row input{flex:1;background:var(–bg3);border:1px solid var(–border);border-radius:8px;padding:9px 12px;font-family:‘JetBrains Mono’,monospace;font-size:13px;color:var(–text);outline:none}
+.input-row input:focus{border-color:var(–accent)}
 .input-row .btn{flex:0 0 70px;padding:9px 4px;border-radius:8px}
-.btn-set-m {background:rgba(0,255,136,0.12);color:var(--green); border:1px solid rgba(0,255,136,0.25)}
-.btn-set-sc{background:rgba(0,212,255,0.12);color:var(--accent);border:1px solid rgba(0,212,255,0.25)}
-.btn-set-mg{background:rgba(168,85,247,0.12);color:var(--purple);border:1px solid rgba(168,85,247,0.25)}
+.btn-set-m {background:rgba(0,255,136,0.12);color:var(–green); border:1px solid rgba(0,255,136,0.25)}
+.btn-set-sc{background:rgba(0,212,255,0.12);color:var(–accent);border:1px solid rgba(0,212,255,0.25)}
+.btn-set-mg{background:rgba(168,85,247,0.12);color:var(–purple);border:1px solid rgba(168,85,247,0.25)}
 
 /* DIVIDER */
-.divider{height:1px;background:var(--border);margin:10px 0}
+.divider{height:1px;background:var(–border);margin:10px 0}
 
 /* BOTTOM NAV */
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(8,11,18,0.97);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:10px 16px 20px;display:flex;gap:8px;z-index:100}
-.nav-btn{flex:1;padding:10px 4px;border-radius:8px;border:1px solid var(--border);font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;background:var(--bg3);color:var(--muted);transition:all 0.2s}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(8,11,18,0.97);backdrop-filter:blur(12px);border-top:1px solid var(–border);padding:10px 16px 20px;display:flex;gap:8px;z-index:100}
+.sticky-bar{position:fixed;bottom:70px;left:0;right:0;z-index:99;background:rgba(8,11,18,0.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,0.06);padding:8px 12px;transition:all 0.3s}
+.sticky-bar.news-active{border-top:1px solid rgba(255,193,7,0.4)}
+.sticky-bar.emergency-active{border-top:1px solid rgba(255,50,50,0.5)}
+.nav-btn{flex:1;padding:10px 4px;border-radius:8px;border:1px solid var(–border);font-family:‘Rajdhani’,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;text-transform:uppercase;background:var(–bg3);color:var(–muted);transition:all 0.2s}
 .nav-btn:active{transform:scale(0.96)}
-.nav-m {background:rgba(0,255,136,0.12);color:var(--m); border-color:rgba(0,255,136,0.3)}
-.nav-sc{background:rgba(0,212,255,0.12);color:var(--sc);border-color:rgba(0,212,255,0.3)}
-.nav-mg{background:rgba(168,85,247,0.12);color:var(--mg);border-color:rgba(168,85,247,0.3)}
+.nav-m {background:rgba(0,255,136,0.12);color:var(–m); border-color:rgba(0,255,136,0.3)}
+.nav-sc{background:rgba(0,212,255,0.12);color:var(–sc);border-color:rgba(0,212,255,0.3)}
+.nav-mg{background:rgba(168,85,247,0.12);color:var(–mg);border-color:rgba(168,85,247,0.3)}
 
 /* DROPDOWN */
-.acc-dropdown{position:fixed;top:55px;right:12px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:6px;z-index:500;min-width:230px;box-shadow:0 8px 32px rgba(0,0,0,0.6);animation:fadeIn 0.15s ease}
-.acc-dropdown-title{font-size:10px;color:var(--muted);letter-spacing:1px;padding:4px 8px 6px;text-transform:uppercase;border-bottom:1px solid var(--border);margin-bottom:4px}
+.acc-dropdown{position:fixed;top:55px;right:12px;background:var(–bg2);border:1px solid var(–border);border-radius:10px;padding:6px;z-index:500;min-width:230px;box-shadow:0 8px 32px rgba(0,0,0,0.6);animation:fadeIn 0.15s ease}
+.acc-dropdown-title{font-size:10px;color:var(–muted);letter-spacing:1px;padding:4px 8px 6px;text-transform:uppercase;border-bottom:1px solid var(–border);margin-bottom:4px}
 .acc-item{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:6px;cursor:pointer;transition:background 0.15s}
 .acc-item:active,.acc-item.active{background:rgba(0,212,255,0.08)}
-.acc-item-id{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--text)}
-.acc-item-info{font-size:10px;color:var(--muted)}
-.acc-item-bal{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--green)}
-.acc-check{color:var(--accent);font-size:14px;margin-left:6px}
-.acc-add{display:flex;align-items:center;gap:6px;padding:8px 10px;border-radius:6px;cursor:pointer;color:var(--accent);font-size:12px;font-weight:600;border-top:1px solid var(--border);margin-top:4px;letter-spacing:1px}
+.acc-item-id{font-family:‘JetBrains Mono’,monospace;font-size:13px;font-weight:700;color:var(–text)}
+.acc-item-info{font-size:10px;color:var(–muted)}
+.acc-item-bal{font-family:‘JetBrains Mono’,monospace;font-size:12px;font-weight:600;color:var(–green)}
+.acc-check{color:var(–accent);font-size:14px;margin-left:6px}
+.acc-add{display:flex;align-items:center;gap:6px;padding:8px 10px;border-radius:6px;cursor:pointer;color:var(–accent);font-size:12px;font-weight:600;border-top:1px solid var(–border);margin-top:4px;letter-spacing:1px}
 .acc-overlay{position:fixed;inset:0;z-index:499}
 
 /* TOAST */
-.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 20px;font-size:13px;font-weight:600;letter-spacing:1px;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:999;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(–bg2);border:1px solid var(–border);border-radius:8px;padding:10px 20px;font-size:13px;font-weight:600;letter-spacing:1px;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:999;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
 .toast.show{opacity:1}
 
 /* LOADING */
-.loading{text-align:center;padding:30px;color:var(--muted);font-size:12px;letter-spacing:2px}
-.spin{width:24px;height:24px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 10px}
+.loading{text-align:center;padding:30px;color:var(–muted);font-size:12px;letter-spacing:2px}
+.spin{width:24px;height:24px;border:2px solid var(–border);border-top-color:var(–accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 10px}
 @keyframes spin{to{transform:rotate(360deg)}}
 </style>
+
 </head>
 <body>
 
 <!-- HEADER -->
+
 <div class="header">
   <div class="header-top">
     <div class="logo">V<span>LIVE</span> PRO</div>
@@ -260,126 +266,208 @@ body::after{
 <div class="content">
 
 <!-- MANUAL -->
+
 <div id="panel-m" class="panel active">
   <div id="m-loading" class="loading"><div class="spin"></div>LOADING...</div>
   <div id="m-content" style="display:none">
 
-    <div class="card m-card">
-      <div class="card-title">Position Summary</div>
-      <div class="stat-grid" style="margin-bottom:10px">
-        <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="m-float">--</div></div>
-        <div class="stat"><div class="stat-label">DAILY DD</div><div class="stat-val neg" id="m-dd">---</div></div>
-      </div>
-      <div class="pos-row">
-        <div class="pos-side"><span class="side-badge buy-badge">BUY</span><span class="pos-lots" id="m-buy-lots">0.00L</span></div>
-        <span class="pos-pnl" id="m-buy-pnl">$0.00</span>
-      </div>
-      <div class="pos-row">
-        <div class="pos-side"><span class="side-badge sell-badge">SELL</span><span class="pos-lots" id="m-sell-lots">0.00L</span></div>
-        <span class="pos-pnl" id="m-sell-pnl">$0.00</span>
-      </div>
-    </div>
+```
+<div class="card m-card">
+  <div class="card-title">Position Summary</div>
+  <div class="stat-grid" style="margin-bottom:10px">
+    <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="m-float">--</div></div>
+    <div class="stat"><div class="stat-label">DAILY DD</div><div class="stat-val neg" id="m-dd">---</div></div>
+  </div>
+  <div class="pos-row">
+    <div class="pos-side"><span class="side-badge buy-badge">BUY</span><span class="pos-lots" id="m-buy-lots">0.00L</span></div>
+    <span class="pos-pnl" id="m-buy-pnl">$0.00</span>
+  </div>
+  <div class="pos-row">
+    <div class="pos-side"><span class="side-badge sell-badge">SELL</span><span class="pos-lots" id="m-sell-lots">0.00L</span></div>
+    <span class="pos-pnl" id="m-sell-pnl">$0.00</span>
+  </div>
+</div>
 
-    <div class="card m-card">
-      <div class="card-title">TP Direction</div>
-      <div class="dir-grid" style="margin-bottom:10px">
-        <button class="dir-btn" id="m-tp-per"     onclick="setTPMode('per_direction')">🎯 Per Direction</button>
-        <button class="dir-btn" id="m-tp-overall" onclick="setTPMode('basket')">🧺 Overall</button>
-      </div>
-      <div class="stat-grid">
-        <div class="stat"><div class="stat-label">TP $</div><div class="stat-val info" id="m-tp">--</div></div>
-        <div class="stat"><div class="stat-label">BASKET $</div><div class="stat-val info" id="m-btp">--</div></div>
-      </div>
-      <div class="input-row">
-        <input type="number" id="m-tp-in" placeholder="Set TP $">
-        <button class="btn btn-set-m" onclick="setManualTP()">SET</button>
-      </div>
-      <div class="input-row">
-        <input type="number" id="m-bkt-in" placeholder="Set Basket $">
-        <button class="btn btn-set-m" onclick="setManualBasket()">SET</button>
-      </div>
-    </div>
+<div class="card m-card">
+  <div class="card-title">TP Direction</div>
+  <div class="dir-grid" style="margin-bottom:10px">
+    <button class="dir-btn" id="m-tp-per"     onclick="setTPMode('per_direction')">🎯 Per Direction</button>
+    <button class="dir-btn" id="m-tp-overall" onclick="setTPMode('basket')">🧺 Overall</button>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><div class="stat-label">TP $</div><div class="stat-val info" id="m-tp">--</div></div>
+    <div class="stat"><div class="stat-label">BASKET $</div><div class="stat-val info" id="m-btp">--</div></div>
+  </div>
+  <div class="input-row">
+    <input type="number" id="m-tp-in" placeholder="Set TP $">
+    <button class="btn btn-set-m" onclick="setManualTP()">SET</button>
+  </div>
+  <div class="input-row">
+    <input type="number" id="m-bkt-in" placeholder="Set Basket $">
+    <button class="btn btn-set-m" onclick="setManualBasket()">SET</button>
+  </div>
+</div>
 
 
-    <button class="btn btn-pause" id="m-pause-btn" onclick="togglePause('manual')" style="width:100%">⏸ Pause</button>
+<button class="btn btn-pause" id="m-pause-btn" onclick="togglePause('manual')" style="width:100%">⏸ Pause</button>
+```
 
   </div>
 </div>
 
 <!-- SCALP -->
+
 <div id="panel-sc" class="panel">
   <div id="sc-loading" class="loading"><div class="spin"></div>LOADING...</div>
   <div id="sc-content" style="display:none">
 
-    <div class="card sc-card">
-      <div class="card-title">Signal & Bias</div>
-      <div class="signal-row">
-        <span style="font-size:11px;color:var(--muted);letter-spacing:1px">SIGNAL</span>
-        <span class="signal-badge sig-none" id="sc-sig">NONE</span>
-      </div>
-      <div class="signal-row">
-        <span style="font-size:11px;color:var(--muted);letter-spacing:1px">BIAS</span>
-        <span class="signal-badge sig-none" id="sc-bias">NEUTRAL</span>
-      </div>
-      <div class="divider"></div>
-      <div class="stat-grid">
-        <div class="stat"><div class="stat-label">BUY POS</div><div class="stat-val info" id="sc-buy-cnt">0</div></div>
-        <div class="stat"><div class="stat-label">SELL POS</div><div class="stat-val info" id="sc-sell-cnt">0</div></div>
-        <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="sc-float">$0.00</div></div>
-        <div class="stat"><div class="stat-label">DAILY DD</div><div class="stat-val neg" id="sc-dd">---</div></div>
-      </div>
-    </div>
+```
+<div class="card sc-card">
+  <div class="card-title">Signal & Bias</div>
+  <div class="signal-row">
+    <span style="font-size:11px;color:var(--muted);letter-spacing:1px">SIGNAL</span>
+    <span class="signal-badge sig-none" id="sc-sig">NONE</span>
+  </div>
+  <div class="signal-row">
+    <span style="font-size:11px;color:var(--muted);letter-spacing:1px">BIAS</span>
+    <span class="signal-badge sig-none" id="sc-bias">NEUTRAL</span>
+  </div>
+  <div class="divider"></div>
+  <div class="stat-grid">
+    <div class="stat"><div class="stat-label">BUY POS</div><div class="stat-val info" id="sc-buy-cnt">0</div></div>
+    <div class="stat"><div class="stat-label">SELL POS</div><div class="stat-val info" id="sc-sell-cnt">0</div></div>
+    <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="sc-float">$0.00</div></div>
+    <div class="stat"><div class="stat-label">DAILY DD</div><div class="stat-val neg" id="sc-dd">---</div></div>
+  </div>
+</div>
 
 
-    <button class="btn btn-pause" id="sc-pause-btn" onclick="togglePause('scalp')" style="width:100%">⏸ Pause</button>
+<button class="btn btn-pause" id="sc-pause-btn" onclick="togglePause('scalp')" style="width:100%">⏸ Pause</button>
+```
 
   </div>
 </div>
 
 <!-- MG -->
+
 <div id="panel-mg" class="panel">
   <div id="mg-loading" class="loading"><div class="spin"></div>LOADING...</div>
   <div id="mg-content" style="display:none">
 
-    <div class="card mg-card">
-      <div class="card-title">Martingale Status</div>
-      <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
-        <span class="mode-badge mode-normal" id="mg-mode">NORMAL</span>
-        <span class="mode-badge" id="mg-dir-badge" style="background:rgba(168,85,247,0.15);color:var(--purple)">AUTO-EMA</span>
-      </div>
-      <div class="stat-grid" style="margin-bottom:10px">
-        <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="mg-float">$0.00</div></div>
-        <div class="stat"><div class="stat-label">DAILY DD</div><div class="stat-val neg" id="mg-dd">---</div></div>
-      </div>
-      <div class="pos-row">
-        <div class="pos-side"><span class="side-badge buy-badge">BUY</span><span class="pos-lots" id="mg-buy-cnt">0 pos</span></div>
-        <span class="pos-pnl" id="mg-buy-pnl">$0.00</span>
-      </div>
-      <div class="pos-row">
-        <div class="pos-side"><span class="side-badge sell-badge">SELL</span><span class="pos-lots" id="mg-sell-cnt">0 pos</span></div>
-        <span class="pos-pnl" id="mg-sell-pnl">$0.00</span>
-      </div>
-    </div>
+```
+<div class="card mg-card">
+  <div class="card-title">Martingale Status</div>
+  <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+    <span class="mode-badge mode-normal" id="mg-mode">NORMAL</span>
+    <span class="mode-badge" id="mg-dir-badge" style="background:rgba(168,85,247,0.15);color:var(--purple)">AUTO-EMA</span>
+  </div>
+  <div class="stat-grid" style="margin-bottom:10px">
+    <div class="stat"><div class="stat-label">FLOATING</div><div class="stat-val" id="mg-float">$0.00</div></div>
+    <div class="stat"><div class="stat-label">DAILY DD</div><div class="stat-val neg" id="mg-dd">---</div></div>
+  </div>
+  <div class="pos-row">
+    <div class="pos-side"><span class="side-badge buy-badge">BUY</span><span class="pos-lots" id="mg-buy-cnt">0 pos</span></div>
+    <span class="pos-pnl" id="mg-buy-pnl">$0.00</span>
+  </div>
+  <div class="pos-row">
+    <div class="pos-side"><span class="side-badge sell-badge">SELL</span><span class="pos-lots" id="mg-sell-cnt">0 pos</span></div>
+    <span class="pos-pnl" id="mg-sell-pnl">$0.00</span>
+  </div>
+</div>
 
-    <div class="card mg-card">
-      <div class="card-title">Trade Direction</div>
-      <div class="dir-grid">
-        <button class="dir-btn" id="mg-dir-auto" onclick="setMGDir('auto')">↕ AUTO EMA</button>
-        <button class="dir-btn" id="mg-dir-buy"  onclick="setMGDir('buy')">▲ BUY ONLY</button>
-        <button class="dir-btn" id="mg-dir-sell" onclick="setMGDir('sell')">▼ SELL ONLY</button>
-        <button class="dir-btn" id="mg-dir-both" onclick="setMGDir('both')">⟺ TWO WAY</button>
-      </div>
-    </div>
+<div class="card mg-card">
+  <div class="card-title">Trade Direction</div>
+  <div class="dir-grid">
+    <button class="dir-btn" id="mg-dir-auto" onclick="setMGDir('auto')">↕ AUTO EMA</button>
+    <button class="dir-btn" id="mg-dir-buy"  onclick="setMGDir('buy')">▲ BUY ONLY</button>
+    <button class="dir-btn" id="mg-dir-sell" onclick="setMGDir('sell')">▼ SELL ONLY</button>
+    <button class="dir-btn" id="mg-dir-both" onclick="setMGDir('both')">⟺ TWO WAY</button>
+  </div>
+</div>
 
 
-    <button class="btn btn-pause" id="mg-pause-btn" onclick="togglePause('mg')" style="width:100%">⏸ Pause</button>
+<button class="btn btn-pause" id="mg-pause-btn" onclick="togglePause('mg')" style="width:100%">⏸ Pause</button>
+```
 
   </div>
 </div>
 
 </div><!-- content -->
 
+<!-- STICKY BAR: Emergency + News Block -->
+
+<div class="sticky-bar" id="sticky-bar">
+
+  <!-- Collapsed Row (always visible) -->
+
+  <div style="display:flex;align-items:center;gap:8px" id="sticky-collapsed">
+    <!-- Emergency button -->
+    <button id="emergency-pause-btn" onclick="emergencyPause()"
+      style="flex:1;background:rgba(255,50,50,0.15);color:#ff5252;border:1px solid rgba(255,50,50,0.35);border-radius:8px;padding:8px 6px;font-size:11px;font-weight:600;letter-spacing:0.5px">
+      🚨 PAUSE ALL
+    </button>
+    <button id="emergency-resume-btn" onclick="emergencyResume()"
+      style="flex:1;background:rgba(0,230,118,0.1);color:#00e676;border:1px solid rgba(0,230,118,0.3);border-radius:8px;padding:8px 6px;font-size:11px;font-weight:600;display:none">
+      ✅ RESUME ALL
+    </button>
+
+```
+<!-- Divider -->
+<div style="width:1px;height:28px;background:rgba(255,255,255,0.1)"></div>
+
+<!-- News Block toggle -->
+<button onclick="toggleNewsExpand()"
+  style="flex:1;background:rgba(255,193,7,0.1);color:#ffc107;border:1px solid rgba(255,193,7,0.3);border-radius:8px;padding:8px 6px;font-size:11px;font-weight:600">
+  📰 NEWS BLOCK
+</button>
+
+<!-- Countdown (replaces buttons when counting) -->
+<div id="emergency-countdown"
+  style="flex:1;text-align:center;font-size:22px;font-weight:700;color:#ff5252;letter-spacing:2px;display:none">
+  15:00
+</div>
+```
+
+  </div>
+
+  <!-- Status row -->
+
+  <div style="display:flex;justify-content:space-between;margin-top:4px;padding:0 2px">
+    <div id="emergency-status" style="font-size:10px;color:#9e9e9e">SC+MG Active</div>
+    <div id="news-block-status" style="font-size:10px;color:#9e9e9e">News: OFF</div>
+  </div>
+
+  <!-- News Block Expanded Panel -->
+
+  <div id="news-expand" style="display:none;margin-top:8px;border-top:1px solid rgba(255,193,7,0.2);padding-top:8px">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+      <span style="color:#9e9e9e;font-size:11px;min-width:28px">From</span>
+      <input type="time" id="news-from" value="14:00"
+        style="flex:1;background:#1a1f2e;color:#fff;border:1px solid #2a3050;border-radius:6px;padding:6px 8px;font-size:13px">
+      <span style="color:#9e9e9e;font-size:11px;min-width:12px">To</span>
+      <input type="time" id="news-to" value="15:00"
+        style="flex:1;background:#1a1f2e;color:#fff;border:1px solid #2a3050;border-radius:6px;padding:6px 8px;font-size:13px">
+    </div>
+    <div style="display:flex;gap:8px">
+      <button onclick="setNewsBlock(true)"
+        style="flex:1;background:rgba(255,193,7,0.12);color:#ffc107;border:1px solid rgba(255,193,7,0.3);border-radius:8px;padding:8px;font-size:12px;font-weight:600">
+        🔒 BLOCK MG
+      </button>
+      <button onclick="setNewsBlock(false)"
+        style="flex:1;background:rgba(100,100,100,0.1);color:#9e9e9e;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px;font-size:12px">
+        🔓 CLEAR
+      </button>
+      <button onclick="toggleNewsExpand()"
+        style="background:rgba(100,100,100,0.1);color:#9e9e9e;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px 12px;font-size:12px">
+        ✕
+      </button>
+    </div>
+  </div>
+
+</div>
+
 <!-- BOTTOM NAV -->
+
 <div class="bottom-nav">
   <button class="nav-btn nav-m"  id="nav-m"  onclick="switchTab('m')">🎯 Manual</button>
   <button class="nav-btn"        id="nav-sc" onclick="switchTab('sc')">🤖 Scalp</button>
@@ -387,6 +475,7 @@ body::after{
 </div>
 
 <!-- ACCOUNT DROPDOWN -->
+
 <div id="acc-overlay" class="acc-overlay" style="display:none" onclick="closeDropdown()"></div>
 <div id="acc-dropdown" class="acc-dropdown" style="display:none">
   <div class="acc-dropdown-title">⚡ Active Accounts</div>
@@ -498,6 +587,7 @@ function rebindListeners(){
   const r1=db.ref(k.manual); r1.on('value',s=>updateManual(s.val())); g_refs.push(r1);
   const r2=db.ref(k.scalp);  r2.on('value',s=>updateScalp(s.val()));  g_refs.push(r2);
   const r3=db.ref(k.mg);     r3.on('value',s=>updateMG(s.val()));     g_refs.push(r3);
+  listenEmergency();
 }
 
 // ── Tab ──
@@ -717,6 +807,136 @@ async function sendCmd(module,cmd,value=''){
   try{await db.ref(key).set(payload);haptic('success');showToast('✅ Sent');}
   catch(e){haptic('error');showToast('❌ '+e.message);}
 }
+// ── Emergency Pause All ───────────────────────────────────
+let emergencyTimer = null;
+let emergencyCountdown = 0;
+
+function toggleNewsExpand(){
+  const p=$('news-expand');
+  p.style.display=p.style.display==='none'?'block':'none';
+  // Update sticky bar height for content padding
+  const sb=$('sticky-bar');
+  if(sb) document.querySelector('.content') && (document.querySelector('.content').style.paddingBottom = p.style.display==='none'?'170px':'260px');
+}
+
+function emergencyPause() {
+  haptic('heavy');
+  if(emergencyTimer) { clearInterval(emergencyTimer); }
+  emergencyCountdown = 15 * 60;
+  $('emergency-pause-btn').style.display = 'none';
+  $('emergency-resume-btn').style.display = '';
+  $('emergency-countdown').style.display = 'block';
+  const st=$('emergency-status');
+  if(st){st.textContent='⏳ Pausing in 15:00...';st.style.color='#ffc107';}
+  const sb=$('sticky-bar');if(sb)sb.classList.add('emergency-active');
+
+  emergencyTimer = setInterval(() => {
+    emergencyCountdown--;
+    const m = Math.floor(emergencyCountdown/60).toString().padStart(2,'0');
+    const s = (emergencyCountdown%60).toString().padStart(2,'0');
+    const cd=$('emergency-countdown');
+    if(cd) cd.textContent = m+':'+s;
+    const st2=$('emergency-status');
+    if(st2) st2.textContent = '⏳ Pausing in '+m+':'+s+'...';
+
+    if(emergencyCountdown <= 0) {
+      clearInterval(emergencyTimer);
+      emergencyTimer = null;
+      $('emergency-countdown').style.display = 'none';
+      writeEmergency(true);
+    }
+  }, 1000);
+}
+
+function emergencyResume() {
+  haptic('medium');
+  if(emergencyTimer) { clearInterval(emergencyTimer); emergencyTimer = null; }
+  const cd=$('emergency-countdown');
+  const pb=$('emergency-pause-btn');
+  const rb=$('emergency-resume-btn');
+  const st=$('emergency-status');
+  const sb=$('sticky-bar');
+  if(cd) cd.style.display='none';
+  if(pb) pb.style.display='';
+  if(rb) rb.style.display='none';
+  if(st){st.textContent='SC+MG Active';st.style.color='#9e9e9e';}
+  if(sb) sb.classList.remove('emergency-active');
+  writeEmergency(false);
+}
+
+function writeEmergency(active) {
+  if(!db) return;
+  const time = active ? new Date().toLocaleTimeString() : '';
+  db.ref('/vlive_emergency').set({ active: active, time: time });
+  if(active) {
+    $('emergency-status').textContent = '🚨 ALL SC+MG PAUSED';
+    $('emergency-status').style.color = '#ff5252';
+    showToast('🚨 Emergency Pause Active!');
+  } else {
+    showToast('✅ All SC+MG Resumed!');
+  }
+}
+
+// ── News Block MG ─────────────────────────────────────────
+function setNewsBlock(enable) {
+  haptic('medium');
+  if(!db) return;
+  if(enable) {
+    const from = $('news-from').value || '14:00';
+    const to   = $('news-to').value   || '15:00';
+    db.ref('/vlive_news_block').set({ enabled: true, from: from, to: to });
+    $('news-block-status').textContent = '🔒 MG Blocked: '+from+' → '+to;
+    $('news-block-status').style.color = '#ffc107';
+    showToast('📰 News Block: '+from+' → '+to);
+  } else {
+    db.ref('/vlive_news_block').set({ enabled: false, from: '', to: '' });
+    $('news-block-status').textContent = '⬜ Disabled';
+    $('news-block-status').style.color = '#9e9e9e';
+    showToast('🔓 News Block Cleared');
+  }
+}
+
+// Read emergency state on Firebase update
+function listenEmergency() {
+  if(!db) return;
+  try {
+  db.ref('/vlive_emergency').on('value', snap => {
+    const d = snap.val();
+    if(!d) return;
+    const pb=$('emergency-pause-btn'), rb=$('emergency-resume-btn');
+    const st=$('emergency-status'), cd=$('emergency-countdown');
+    if(d.active && !emergencyTimer) {
+      if(pb) pb.style.display='none';
+      if(rb) rb.style.display='';
+      if(cd) cd.style.display='none';
+      if(st){st.textContent='🚨 ALL SC+MG PAUSED';st.style.color='#ff5252';}
+      const sb=$('sticky-bar');if(sb)sb.classList.add('emergency-active');
+    } else if(!d.active && !emergencyTimer) {
+      if(pb) pb.style.display='';
+      if(rb) rb.style.display='none';
+      if(cd) cd.style.display='none';
+      if(st){st.textContent='SC+MG Active';st.style.color='#9e9e9e';}
+      const sb=$('sticky-bar');if(sb)sb.classList.remove('emergency-active');
+    }
+  });
+  db.ref('/vlive_news_block').on('value', snap => {
+    const d = snap.val();
+    if(!d) return;
+    const ns=$('news-block-status');
+    const sb=$('sticky-bar');
+    if(d.enabled) {
+      if($('news-from')) $('news-from').value = d.from||'14:00';
+      if($('news-to'))   $('news-to').value   = d.to  ||'15:00';
+      if(ns){ns.textContent='📰 '+(d.from||'')+'→'+(d.to||'');ns.style.color='#ffc107';}
+      if(sb) sb.classList.add('news-active');
+    } else {
+      if(ns){ns.textContent='News: OFF';ns.style.color='#9e9e9e';}
+      if(sb) sb.classList.remove('news-active');
+    }
+  });
+  } catch(e){ console.warn('listenEmergency:',e); }
+}
+
 function togglePause(module){
   haptic('light');
   const k=module==='manual'?'manual':module==='scalp'?'scalp':'mg';
@@ -779,5 +999,6 @@ if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.ser
 rebindListeners();
 loadAccounts();
 </script>
+
 </body>
 </html>
